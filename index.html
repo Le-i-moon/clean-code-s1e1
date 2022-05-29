@@ -6,13 +6,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
     />
-    <link
-      rel="stylesheet"
-      href="style.css"
-      type="text/css"
-      media="screen"
-      charset="utf-8"
-    />
+    <link rel="stylesheet" href="style.css" media="screen" charset="utf-8" />
   </head>
   <body class="app">
     <header class="header">
@@ -27,12 +21,12 @@
         >Want more details?</a
       >
     </header>
-    <main class="centered-main-page-element">
+    <main class="main-wrapper">
       <section>
-        <h3>Add Item</h3>
-        <div class="new-task-wrapper task">
+        <h3 class="title">Add Item</h3>
+        <div class="task-new task">
           <input
-            class="task__input task__input_text"
+            class="input-text task__input_text"
             id="new-task"
             type="text"
           />
@@ -43,20 +37,26 @@
       <section>
         <h3 class="title">Todo</h3>
         <ul class="task-list" id="incomplete-tasks">
-          <li class="task-list__item task">
-            <input class="task__input task__input_checkbox" type="checkbox" />
-            <label class="task__label">Pay Bills</label>
-            <input class="task__input task__input_text task" type="text" />
+          <li class="task-list__task task">
+            <input
+              class="task__input-checkbox input_checkbox"
+              type="checkbox"
+            />
+            <label class="label task__label">Pay Bills</label>
+            <input class="input-text task__input-text" type="text" />
             <button class="task__button task__button_edit button">Edit</button>
             <button class="task__button task__button_delete button">
               <img class="button__img" src="./remove.svg" alt="Delete button" />
             </button>
           </li>
-          <li class="task-list__item task-list__item_edit task">
-            <input class="task__input task__input_checkbox" type="checkbox" />
-            <label class="task__label">Go Shopping</label>
+          <li class="task-list__task task-list__task_edit task">
             <input
-              class="task__input task__input_text"
+              class="input-checkbox task__input-checkbox"
+              type="checkbox"
+            />
+            <label class="label task__label">Go Shopping</label>
+            <input
+              class="input-text task__input-text"
               type="text"
               value="Go Shopping"
               class="task"
@@ -70,15 +70,15 @@
       </section>
       <section>
         <h3 class="title">Completed</h3>
-        <ul class="task-list" id="completed-tasks">
-          <li class="task-list__item task">
+        <ul class="task-list task-list_completed" id="completed-tasks">
+          <li class="task-list__task task">
             <input
-              class="task__input task__input_chckbox"
+              class="input-checkbox task__input-checkbox"
               type="checkbox"
               checked
             />
-            <label class="task__label">See the Doctor</label>
-            <input class="task__input task__input_text" type="text" />
+            <label class="label task__label">See the Doctor</label>
+            <input class="input-text task__input-text" type="text" />
             <button class="task__button task__button_edit button">Edit</button>
             <button class="task__button task__button_delete button">
               <img class="button__img" src="./remove.svg" alt="Delete button" />
